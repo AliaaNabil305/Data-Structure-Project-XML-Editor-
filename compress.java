@@ -144,6 +144,7 @@ public class compress {
                 index= deComp(root, index, sb,st);
             }
         }
+         st.append(st.toString().replaceAll(">",">\n"));
         return st.toString();
     }
     public static Integer deComp(Node root, int index, StringBuilder sb,StringBuilder s)
