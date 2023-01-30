@@ -272,4 +272,22 @@ public Node(Character chData,Integer data,Node left,Node right){
 
 
 }
+     public static void main(String []args) throws IOException {
+        //compression file path
+        Path path1 = Paths.get("C:\\Users\\yassi\\Desktop\\comp.TXT");
+        //Decompression file path
+       Path path2 = Paths.get("C:\\Users\\yassi\\Desktop\\decomp.TXT");
+       //xml text file path
+        compress ob=new compress("C:\\Users\\yassi\\Desktop\\sample.xml");
+        Node root= compress.Tree(ob.exp);
+        StringBuilder s=new StringBuilder("");
+        Map<Character, String> ctr = new HashMap<>();
+         System.out.println(compress.compressor(root,"",ctr,ob.exp));
+         System.out.println(compress.DeCompressor(root,0,compress.compressor(root,"",ctr,ob.exp)));
+      Files.writeString(path1,compress.compressor(root,"",ctr,ob.exp) , StandardCharsets.UTF_8);
+      Files.writeString(path2,compress.DeCompressor(root,0,compress.compressor(root,"",ctr,ob.exp)),StandardCharsets.UTF_8);
+
+
+
+    }
 }
