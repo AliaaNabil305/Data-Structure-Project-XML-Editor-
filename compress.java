@@ -47,7 +47,7 @@ public class compress {
     }
 
 
-    public static String compressor(Node root, String str, Map<Character, String> ctr, String s){
+     public static String compressor(Node root, String str, Map<Character, String> ctr, String s){
 
 
 
@@ -72,9 +72,13 @@ public class compress {
 
 
         int len=sb.length();
-        int p=0;
+        int end=0,t=0;
         for (int i = 0; i < len; i += 7) {
-            int end = Math.min(i + 7, len);
+             end = Math.min(i + 7, len);
+             if(end==len){
+                t=i+7;
+                 break;
+             }
             String sevenBits = sb.substring(i, end);
 
             char c=binaryToChar(sevenBits);
@@ -82,7 +86,89 @@ public class compress {
            k+=c;
 
         }
+       k+= sb.substring(t-7,end);
+        return k;
+    }  public static String compressor(Node root, String str, Map<Character, String> ctr, String s){
 
+
+
+        comp(root, str, ctr);
+        StringBuilder sb = new StringBuilder("");
+        for (char c: s.toCharArray())
+        {
+            sb.append(ctr.get(c));
+        }
+
+
+
+        BigInteger b=new BigInteger(sb.toString(),2);
+        String y=new String(b.toByteArray());
+        String x=new String(sb.toString());
+        String d=new String("");
+        for (int i=0;i<y.length();i++) {
+            if(x.charAt(i)==' '){}
+            else{d+=x.charAt(i);}
+        }
+        String k=new String("");
+
+
+        int len=sb.length();
+        int end=0,t=0;
+        for (int i = 0; i < len; i += 7) {
+             end = Math.min(i + 7, len);
+             if(end==len){
+                t=i+7;
+                 break;
+             }
+            String sevenBits = sb.substring(i, end);
+
+            char c=binaryToChar(sevenBits);
+            c+=20;
+           k+=c;
+
+        }
+       k+= sb.substring(t-7,end);
+        return k;
+    }   public static String compressor(Node root, String str, Map<Character, String> ctr, String s){
+
+
+
+        comp(root, str, ctr);
+        StringBuilder sb = new StringBuilder("");
+        for (char c: s.toCharArray())
+        {
+            sb.append(ctr.get(c));
+        }
+
+
+
+        BigInteger b=new BigInteger(sb.toString(),2);
+        String y=new String(b.toByteArray());
+        String x=new String(sb.toString());
+        String d=new String("");
+        for (int i=0;i<y.length();i++) {
+            if(x.charAt(i)==' '){}
+            else{d+=x.charAt(i);}
+        }
+        String k=new String("");
+
+
+        int len=sb.length();
+        int end=0,t=0;
+        for (int i = 0; i < len; i += 7) {
+             end = Math.min(i + 7, len);
+             if(end==len){
+                t=i+7;
+                 break;
+             }
+            String sevenBits = sb.substring(i, end);
+
+            char c=binaryToChar(sevenBits);
+            c+=20;
+           k+=c;
+
+        }
+       k+= sb.substring(t-7,end);
         return k;
     }
     public static char binaryToChar(String binary) {
@@ -104,17 +190,17 @@ public class compress {
         comp(root.left_node, str + '0', ctr);
         comp(root.right_node, str + '1', ctr);
     }
-    public static String charToBinaryString(String str) {
+     public static String charToBinaryString(String str) {
         StringBuilder binaryString = new StringBuilder();
-        int i=0;
         for (char c : str.toCharArray()) {
-            i++;
-
+        
+          if(c=='1'||c=='0'){binaryString.append(c);}
+          else {
             c-=20;
             int charCode = (int) c;
             binaryString.append(String.format("%7s", Integer.toBinaryString(charCode)).replace(' ', '0'));
-            if(i==str.length()-2){break;}
-        }
+    
+        }}
         return binaryString.toString();
     }
     public static String DeCompressor(Node root, int index, String s){
