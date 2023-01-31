@@ -41,7 +41,7 @@ Some text editors such as Sublime Text are able to parse such files and do some 
 - This feature should aim at decreasing the size of an XML file (compressing it) by deleting the whitespaces and indentations
 
 #### `XML to JSON`
-JSON((Javascript Object Notation) is a format that is used to represent data, and It’s helpful to convert the XML into JSON, especially when using 
+JSON (Javascript Object Notation) is a format that is used to represent data, and It’s helpful to convert the XML into JSON, especially when using 
 javascript as there’s tons of libraries and tools that use json notation.
 Conversion to XML is done on three iterations:
 1. Transform the xml string into array of node objects.
