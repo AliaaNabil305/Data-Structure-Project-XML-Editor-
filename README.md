@@ -36,6 +36,8 @@ Some text editors such as Sublime Text are able to parse such files and do some 
 - Adjust the indentation of an XML file, to make it more readable.
 - If the file is not consistent, user cannot format it.
 
+![This is an image](Project%20SnapShots/XML_Format.jpg)
+
 #### `Minify`
 - Since spaces and newlines (\n) are actually characters that can increase the size of an XML document. 
 - This feature should aim at decreasing the size of an XML file (compressing it) by deleting the whitespaces and indentations
