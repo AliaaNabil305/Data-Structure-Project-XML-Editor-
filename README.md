@@ -35,6 +35,10 @@ Some text editors such as Sublime Text are able to parse such files and do some 
 | :---:                         |     :---:  |          :---:         |
 |   ![This is an image](Project%20SnapShots/Check_ErrorFree.jpg) |  ![This is an image](Project%20SnapShots/Check_BalanceError.jpg)  | ![This is an image](Project%20SnapShots/Check_MissingBracketsError.jpg) | 
 
+
+#### `Error Correction`
+
+
 #### `Format/Prettify`
 - XML file should be well formatted by keeping the indentation for each level.
 - Adjust the indentation of an XML file, to make it more readable.
