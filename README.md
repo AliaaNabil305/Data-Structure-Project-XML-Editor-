@@ -36,7 +36,11 @@ Some text editors such as Sublime Text are able to parse such files and do some 
 |   ![This is an image](Project%20SnapShots/Check_ErrorFree.jpg) |  ![This is an image](Project%20SnapShots/Check_BalanceError.jpg)  | ![This is an image](Project%20SnapShots/Check_MissingBracketsError.jpg) | 
 
 
-#### `Error Correction`
+#### `Error Detection and Correction`
+- While checking the XML consistency: The input XML may have inconsistencies like missing any
+  of the closing and opening tags or not matching tags.
+- The program should be able to detect and visually show any errors in consistency.
+- The program will also be able to solve the errors and Error detection and correction will do this functionality.
 
 
 #### `Format/Prettify`
@@ -79,4 +83,43 @@ Conversion to XML is done on three iterations:
 | :---:                         |     :---:  |
 |   ![This is an image](Project%20SnapShots/XML_Compression.jpg) |  ![This is an image](Project%20SnapShots/XML_Decompression.jpg)  | 
 
-## ***Project Phase#2***  
+## ***Project Phase#2***
+
+### Supported Features:
+- Graph Representation
+- Network Analysis
+- Post Search
+- Graph Visualization
+
+#### `Graph Representation`
+- Representing the users data using the graph data structure as the XML file will represent the
+  users data in a social network (their posts, followers, ...etc).
+- The user data is his id (unique across the network), name, list of his posts and followers.
+- By using the graph data structure we represent the relation between the followers
+  as it will be very helpful for the network analysis.
+  
+  
+#### `Network Analysis`
+- By using the graph data structure to represent the network so we can
+  extract some important data:
+  a) who is the most influencer user (has the most followers).
+  b) who is the most active user (connected to lots of users).
+  c) the mutual followers between 2 users.
+  d) for each user, suggest a list of users to follow (the followers of his followers).
+  
+  
+  
+  
+  
+#### `Post Search`
+- By given a specific word or topic, get the posts where this word or topic was
+  mentioned.
+  
+  
+  
+  
+  
+#### `Graph Visualization`
+- visualizing the graph of the network showing how the user is connected to each other.
+
+
