@@ -71,4 +71,8 @@ Conversion to XML is done on three iterations:
 - The smaller the output file is, the more efficient your algorithm is
 - Decompressing the compressed data to return to its original format
 
+| Compression      | Decompression |
+| :---:                         |     :---:  |
+|   ![This is an image](Project%20SnapShots/XML_Compression.jpg) |  ![This is an image](Project%20SnapShots/XML_Decompression.jpg)  | 
+
 ## ***Project Phase#2***  
